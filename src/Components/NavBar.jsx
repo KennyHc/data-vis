@@ -3,12 +3,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+const theme = 'dark'
+
 function NavBar() {
 
     const navbarBrand = <Navbar.Brand href="#home">Data Visualizer</Navbar.Brand>;
     const navbarToggle = <Navbar.Toggle aria-controls="basic-navbar-nav" />;
     const navbarLinks = (
-        <Nav className="me-auto">
+        <Nav className="me-auto" >
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Information</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -26,7 +28,7 @@ function NavBar() {
     );
 
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar expand="lg" data-bs-theme={theme}>
             <Container>
                 {navbarBrand}
                 {navbarToggle}
