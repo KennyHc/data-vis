@@ -7,7 +7,7 @@ import {useState} from "react";
 import chatCompletion from "../api/openai";
 
 const theme = 'dark'
-function InputBox({setChartData}) {
+function InputBox({chartConfig, setChartConfig}) {
 
     const [inputText, setInputText] = useState('');
     const [response,setResponse] = useState('')
@@ -15,8 +15,15 @@ function InputBox({setChartData}) {
 
     const onSubmit = async ()=> {
         console.log('response sent',response)
-        chatCompletion(inputText).then(res=> {
+        const request = `Given the following Chart.js configuration: ${JSON.stringify(chartConfig)}
+         and the following user requirements: "${inputText}"
+         DO NOT include any other text other than the configuration object in your response`
+
+        console.log(request)
+        chatCompletion(request).then(res=> {
+            console.log(res)
             setResponse(res.choices[0].message.content)
+            setChartConfig(JSON.parse(res.choices[0].message.content))
         })
     }
 
