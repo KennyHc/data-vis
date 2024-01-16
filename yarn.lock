@@ -5262,6 +5262,8 @@ __metadata:
     "@testing-library/user-event": "npm:^13.5.0"
     chart.js: "npm:^4.4.1"
     chartjs: "npm:^0.3.24"
+    dotenv: "npm:^16.3.1"
+    dotenv-webpack: "npm:^8.0.1"
     openai: "npm:^4.24.7"
     react: "npm:^18.2.0"
     react-bootstrap: "npm:^2.9.2"
@@ -5269,6 +5271,7 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-scripts: "npm:5.0.1"
     web-vitals: "npm:^2.1.4"
+    webpack: "npm:^5.89.0"
   languageName: unknown
   linkType: soft
 
@@ -5640,6 +5643,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv-defaults@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "dotenv-defaults@npm:2.0.2"
+  dependencies:
+    dotenv: "npm:^8.2.0"
+  checksum: 14b7b8f6c21a30404106384398728746e63405bfeabe47ef7aadd0e81de49986d5896a612e5b1acddf655af6472a24947b7b113aa3ef3270a2877afa9c5bd287
+  languageName: node
+  linkType: hard
+
 "dotenv-expand@npm:^5.1.0":
   version: 5.1.0
   resolution: "dotenv-expand@npm:5.1.0"
@@ -5647,10 +5659,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv-webpack@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "dotenv-webpack@npm:8.0.1"
+  dependencies:
+    dotenv-defaults: "npm:^2.0.2"
+  peerDependencies:
+    webpack: ^4 || ^5
+  checksum: ddd12406e7b27a9f324110d34ddf6efdf386f8f6dbbf903cb74b63ed582c28262197eadca4e20cdee55d1e427cc4acd47c9dadd38bfc49219ae215d0b688c2e8
+  languageName: node
+  linkType: hard
+
 "dotenv@npm:^10.0.0":
   version: 10.0.0
   resolution: "dotenv@npm:10.0.0"
   checksum: 2d8d4ba64bfaff7931402aa5e8cbb8eba0acbc99fe9ae442300199af021079eafa7171ce90e150821a5cb3d74f0057721fbe7ec201a6044b68c8a7615f8c123f
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^16.3.1":
+  version: 16.3.1
+  resolution: "dotenv@npm:16.3.1"
+  checksum: b95ff1bbe624ead85a3cd70dbd827e8e06d5f05f716f2d0cbc476532d54c7c9469c3bc4dd93ea519f6ad711cb522c00ac9a62b6eb340d5affae8008facc3fbd7
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^8.2.0":
+  version: 8.6.0
+  resolution: "dotenv@npm:8.6.0"
+  checksum: 6750431dea8efbd54b9f2d9681b04e1ccc7989486461dcf058bb708d9e3d63b04115fcdf8840e38ad1e24a4a2e1e7c1560626c5e3ac7bc09371b127c49e2d45f
   languageName: node
   linkType: hard
 
@@ -13514,7 +13551,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.64.4":
+"webpack@npm:^5.64.4, webpack@npm:^5.89.0":
   version: 5.89.0
   resolution: "webpack@npm:5.89.0"
   dependencies:

@@ -1,10 +1,11 @@
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+    dangerouslyAllowBrowser: true
 });
 
-const chatCompletion = async (content) => {
+export default async function chatCompletion(content){
 
     const role = "user"
     const model = "gpt-3.5-turbo"
@@ -14,11 +15,4 @@ const chatCompletion = async (content) => {
         model: model ,
     });
 }
-
-const chatCompletionTest = await openai.chat.completions.create({
-    messages: [{ role: "user", content: "Say this is a test" }],
-    model: "gpt-3.5-turbo",
-});
-
-module.exports = {chatCompletion,chatCompletionTest}
 
